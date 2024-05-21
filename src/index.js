@@ -101,3 +101,29 @@ const camelCase = (str) => {
 // Test cases
 console.log(camelCase('hello world'));
 
+// Challenge 8
+// shift() - Moves the first character of a string to the end of the string.
+// Example: Hello World -> ello WorldH
+
+const shift = (str) => {
+    return str.slice(1) + str[0];
+}
+
+// Test cases
+console.log(shift('hello world'));
+
+// Challenge 9
+// makeHashTag(str) - This function should convert the given string to a hash tag. A hash tag begins with # and no spaces. Each word in the phrase begins with an uppercase letter.
+
+// If the given string has more than three words pick the three longest and make the hash tag from those.
+
+// Example:
+
+// input: "Amazing bongo drums for sale"
+// output: ['#amazing', '#bongo', '#drums']
+
+const makeHashTag = (str) => {
+    let words = str.split(' ');
+    // check the length and sort by length
+    
+}

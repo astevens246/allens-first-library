@@ -51,3 +51,53 @@ console.log(removeExtraSpaces('   i   love    coding    '));
 // kebobCase() - Removes extra spaces and replaces spaces with the hyphen "-", and makes all characters lowercase.
 // Example: "   Hello    world   " -> "hello-world"
 
+const kebobCase = (str) => {
+    str = str.toLowerCase(); 
+    let words = str.split('');
+
+    words = words.filter(word => {
+        let charCode = word.charCodeAt(0);
+        return (charCode === 32 || (charCode >= 48 && charCode <= 57) ||(charCode >=  7 && charCode <= 122) || (charCode === 45));
+    }
+    );
+    return removeExtraSpaces(words.join('')).replace(/\s/g, '-');
+
+}
+
+console.log(kebobCase('   Hello    world my name is allen  '));
+
+// Challenge 6
+// snakeCase() - Removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase.
+
+// Example: "  what the    heck   " -> "what_the_heck"
+
+const snakeCase = (str, separator) => {
+    str = str.toLowerCase(); 
+    let words = str.split('');
+
+    words = words.filter(word => {
+        let charCode = word.charCodeAt(0);
+        return (charCode === 32 || (charCode >= 48 && charCode <= 57) ||(charCode >=  7 && charCode <= 122) || (charCode === 45));
+    }
+    );
+    return removeExtraSpaces(words.join('')).replace(/\s/g, separator);
+}
+
+console.log(snakeCase(' what    in      the world  ', '_'));
+
+// Challenge 7
+// camelCase() - Lowercases the first character of the first word. Then uppercases the first character of all other words, and removes all spaces.
+
+// Example: Camel Case -> camelCase
+
+const camelCase = (str) => {
+    let phrase = str.toLowerCase().split(' ');
+    if (phrase.length > 1) {
+        phrase[1] = capitalize(phrase[1]);
+    }
+    return phrase.join('');
+}
+
+// Test cases
+console.log(camelCase('hello world'));
+

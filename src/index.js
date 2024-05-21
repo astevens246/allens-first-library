@@ -13,3 +13,10 @@ console.log(capitalize('allen'));
 // allCaps() - makes all characters uppercase. (this is the same as str.toUpperCase())
 
 // Example: foo bar -> FOO BAR
+
+const allCaps = (str) => {
+    return str.toUpperCase();
+}
+// Test cases
+console.log(allCaps('hello world'));
+console.log(allCaps('allen stevens'));

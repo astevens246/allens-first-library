@@ -1,12 +1,23 @@
 {
   "name": "allens-first-library",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astevens246/allens-first-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/astevens246/allens-first-library/issues"
+  },
+  "homepage": "https://github.com/astevens246/allens-first-library#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

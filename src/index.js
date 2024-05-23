@@ -124,6 +124,26 @@ console.log(shift('hello world'));
 
 const makeHashTag = (str) => {
     let words = str.split(' ');
-    // check the length and sort by length
-    
+    words.sort((a, b) => b.length - a.length);
+    let hashTags = words.slice(0, 3).map(word => '#' + word.toLowerCase());    
+    return hashTags;
 }
+
+// Test cases
+console.log(makeHashTag('Amazing bongo drums for sale'));
+
+// Challenge 10
+// isEmpty(str) - Returns true if the given string is empty or contains only whitespace. White space includes: spaces, line returns, and tabs. These characters can be represented with: \n (new line) \r (carrige return), \t (tab).
+
+// Example:
+
+// Input: "Abc def"
+// Output: isEmpty("Abc def") // false
+
+const isEmpty = (str) => {
+    return str.trim() === '';
+}       
+
+// Test cases
+console.log(isEmpty(''));
+console.log(isEmpty(' test  '));

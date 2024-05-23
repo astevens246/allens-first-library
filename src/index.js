@@ -3,6 +3,9 @@
 // Ex. capitalize('hello') => 'Hello'
 
 const capitalize = (str) => {
+    if (str.length === 0) {
+        return str;
+    }
     return str[0].toUpperCase() + str.slice(1);
 }
 // Test cases
@@ -147,3 +150,9 @@ const isEmpty = (str) => {
 // Test cases
 console.log(isEmpty(''));
 console.log(isEmpty(' test  '));
+
+
+module.exports = { capitalize, allCaps, 
+    capitalizeWords, removeExtraSpaces, 
+    kebobCase, snakeCase, camelCase, 
+    shift, makeHashTag, isEmpty };

@@ -74,16 +74,10 @@ console.log(kebobCase('   Hello    world my name is allen  '));
 
 // Example: "  what the    heck   " -> "what_the_heck"
 
-const snakeCase = (str, separator) => {
+const snakeCase = (str) => {
     str = str.toLowerCase(); 
-    let words = str.split('');
-
-    words = words.filter(word => {
-        let charCode = word.charCodeAt(0);
-        return (charCode === 32 || (charCode >= 48 && charCode <= 57) ||(charCode >=  7 && charCode <= 122) || (charCode === 45));
-    }
-    );
-    return removeExtraSpaces(words.join('')).replace(/\s/g, separator);
+    str = str.replace(/\s+/g, ' ').trim(); // replace multiple spaces with a single space/trim spaces
+    return str.replace(/\s/g, '_'); // replace all spaces with underscores
 }
 
 console.log(snakeCase(' what    in      the world  ', '_'));
@@ -109,6 +103,9 @@ console.log(camelCase('hello world'));
 // Example: Hello World -> ello WorldH
 
 const shift = (str) => {
+    if (str.length === 0) {
+        return str;
+    }
     return str.slice(1) + str[0];
 }
 

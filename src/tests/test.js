@@ -38,13 +38,20 @@ test('removeExtraSpaces', () => {
 
 test('kebobCase', () => {
     expect(kebobCase('   Hello    world my name is allen  ')).toBe('hello-world-my-name-is-allen');
-    expect(kebobCase('  what    in      the world  ')).toBe('what-in-the-world');
+    expect(kebobCase('')).toBe('');
+    expect(kebobCase('123')).toBe('123');
+    expect(kebobCase('hello')).toBe('hello');
+    expect(kebobCase('HELLO')).toBe('hello');
+    expect(kebobCase('hello world')).toBe('hello-world');
 });
 
 test('snakeCase', () => {
     expect(snakeCase(' what    in      the world  ', '_')).toBe('what_in_the_world');
-    expect(snakeCase('  what    in      the world  ', '_')).toBe('what_in_the_world');
-    expect(snakeCase('  what in      the world  ', '_')).toBe('what_in_the_world');
+    expect(snakeCase('')).toBe('');
+    expect(snakeCase('123')).toBe('123');
+    expect(snakeCase('hello')).toBe('hello');
+    expect(snakeCase('HELLO')).toBe('hello');
+    expect(snakeCase('hello world')).toBe('hello_world');
 });
 
 test('camelCase', () => {
@@ -56,6 +63,8 @@ test('camelCase', () => {
 test ('shift', () => {
     expect(shift('allen stevens')).toBe('llen stevensa');
     expect(shift('hello')).toBe('elloh');
+    expect(shift('')).toBe('');
+    expect(shift('a')).toBe('a');
 });
 
 test ('makeHashTag', () => {
@@ -68,5 +77,6 @@ test ('isEmpty', () => {
     expect(isEmpty('hello world my name is allen')).toBe(false);
     expect(isEmpty('')).toBe(true);
     expect(isEmpty(' ')).toBe(true);
+    expect(isEmpty('123')).toBe(false);
 });
 

@@ -43,6 +43,7 @@ test('kebobCase', () => {
     expect(kebobCase('hello')).toBe('hello');
     expect(kebobCase('HELLO')).toBe('hello');
     expect(kebobCase('hello world')).toBe('hello-world');
+    expect(kebobCase('hello-world')).toBe('hello-world');
 });
 
 test('snakeCase', () => {

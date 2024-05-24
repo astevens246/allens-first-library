@@ -60,7 +60,7 @@ const kebobCase = (str) => {
 
     words = words.filter(word => {
         let charCode = word.charCodeAt(0);
-        return (charCode === 32 || (charCode >= 48 && charCode <= 57) ||(charCode >=  7 && charCode <= 122) || (charCode === 45));
+        return (charCode === 32 || (charCode >= 48 && charCode <= 57) || (charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || (charCode === 45));
     }
     );
     return removeExtraSpaces(words.join('')).replace(/\s/g, '-');

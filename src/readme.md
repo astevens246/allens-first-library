@@ -1,8 +1,7 @@
 \`\`\`markdown
 # Allen's First Library
 
-![npm bundle size](https://img.shields.io/bundlephobia/min/%40astevens2024%2Fallens-first-library)
-
+![npm bundle size](https://img.shields.io/bundlephobia/min/allens-first-library)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/astevens246/allens-first-library)
 
 Allen's First Library is a string utility library. It provides a set of functions to manipulate and format strings in various ways.

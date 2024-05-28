@@ -1,4 +1,3 @@
-\`\`\`markdown
 # Allen's First Library
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/%40astevens2024%2Fallens-first-library)
